@@ -1,0 +1,99 @@
+    1  mdkir -p /root/mephi_hw
+    2  mkdir -p /root/mephi_hw
+    3  cd /root/mephi_hw
+    4  groupadd students
+    5  useradd -u 1234 -g students -m -s /bin/bash user1
+    6  passwd user1
+    7  123
+    8  useradd -u 1234 -g students -m -s /bin/bash user1
+    9  passwd user1
+   10  chage -M 90 user1
+   11  id user1
+   12  chage -1 user1
+   13  chage -l user1
+   14  find / -perm -4000 -type f 2>/dev/null > /root/mephi_hw/suid_files.out
+   15  cat /root/mephi_hw/suid_files.out
+   16  su - user1 -c 'passwd' &
+   17  clear
+   18   [23~~~~~
+   19  clear
+   20  ~
+   21  clear
+   22  id user1
+   23  chage -l user1
+   24  su - user1 -c 'passwd' &
+   25  12345678
+   26  clear
+   27  passwd user1
+   28  su - user1 -c 'passwd' &
+   29  12345678
+   30  сдуфк
+   31  su - user1 -c 'passwd' &
+   32  сдуфк
+   33  clear
+   34  passwd user1
+   35  su - user1 -c 'passwd' &
+   36  2345678
+   37  su - user1 -c 'passwd' &
+   38  passwd user1
+   39  su - user1 -c 'passwd' &
+   40  clear
+   41  su - user1 -c 'passwd' &
+   42  passwd user1
+   43  su - user1 -c 'passwd' &
+   44  enattanki1997ya_
+   45  su - user1 -c 'passwd' &
+   46  R
+   47  clear
+   48  su - user1 -c 'passwd' &
+   49  clear
+   50  passwd user1
+   51  su - user1 -c 'passwd' &
+   52  x
+   53  passwd user1
+   54  su - user1 -c 'passwd' &
+   55  nn
+   56  passwd user1 &
+   57  123
+   58  passwd user1 &
+   59  clear
+   60  passwd user1 &
+   61  fg
+   62  ps -eo pid,ruid,euid,comm --sort=euid | awk '$2 != 0 && $3 == 0' > /root/mephi_hw/process.out
+   63  cat /root/mephi_hw/processes.out
+   64  ps -eo pid,ruid,euid,comm --sort=euid | awk '$2 != 0 && $3 == 0' > /root/mephi_hw/processes.out
+   65  cat /root/mephi_hw/processes.out
+   66  cp /bin/cat /tmp/mycat
+   67  chown root:root /tmp/mycat
+   68  chmod u+s /tmp/mycat
+   69  ls -l /tmp/mycat
+   70  su - user1 -c '/tmp/mycat /etc/shadow'
+   71  cp /bin/cat /home/user1/mycat
+   72  chown root;root /home/user1/mycat
+   73  chown root:root /home/user1/mycat
+   74  chmod u+s /home/user1/mycat
+   75  ls -l /home/user1/mycat
+   76  su - user1 -c '/home/user1/mycat /etc/shadow'
+   77  stat /home/user1/mycat > /root/mephi_hw/stat_suid.out
+   78  cp /bin/chown /home/user1/mychown
+   79  setcap cap_chown+e[ /home/user1/mychown
+   80  setcap cap_chown+ep /home/user1/mychown
+   81  getcap /home/user1/mychown
+   82  touch /tmp/testfile
+   83  su - user1 -c '/home/user1/mychown root:root / tmp/testfile'
+   84  touch /tmp/testfile
+   85  chmod 777 /tmp/testfile
+   86  su - user1 -c '/home/user1/mychown root:root /tmp/testfile'
+   87  ls -l /tmp/testfile
+   88  stat /home/user1/mychown > /root/mephi_hw/stat_cap.out
+   89  getcap /home/user1/mychown > /root/mephi_hw/getcap.out
+   90  visudo
+   91  su - user1 -c "sudo date -s '2026-11-08 12:00:00' "
+   92  123
+   93  m
+   94  su - user1 -c "sudo date -s '2026-11-08 12:00:00' "
+   95  m
+   96  visudo
+   97  su - user1 -c "sudo date -s '2026-11-08 12:00:00' "
+   98  cp /etc/sudoers /root/mephi_hw/sudoers.out
+   99  history > /root/mephi_hw/history.out
